@@ -6,7 +6,13 @@ $(document).ready(function(){
         var newStudentLine = $("<li>");
         newStudentLine.text(studName);
         $('#rosterList').append(newStudentLine);
-        newStudentLine.addClass("list-group-item")
+        newStudentLine.addClass("list-group-item");
+
+        var studentRemoveButton = $("<button>");
+        studentRemoveButton.text("Remove");
+        studentRemoveButton.addClass("btn btn-danger");
+        studentRemoveButton.attr("style","float:right")
+        newStudentLine.append(studentRemoveButton);
 
     }
 });
